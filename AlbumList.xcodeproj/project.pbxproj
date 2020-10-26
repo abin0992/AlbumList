@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		86C693522546EAD600F71F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693512546EAD600F71F5F /* AppDelegate.swift */; };
 		86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693532546EAD600F71F5F /* SceneDelegate.swift */; };
-		86C693562546EAD600F71F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693552546EAD600F71F5F /* ViewController.swift */; };
-		86C693592546EAD600F71F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C693572546EAD600F71F5F /* Main.storyboard */; };
 		86C6935B2546EAD800F71F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C6935A2546EAD800F71F5F /* Assets.xcassets */; };
 		86C6935E2546EAD800F71F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C6935C2546EAD800F71F5F /* LaunchScreen.storyboard */; };
 		86C693692546EAD900F71F5F /* AlbumListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693682546EAD900F71F5F /* AlbumListTests.swift */; };
 		86C693742546EAD900F71F5F /* AlbumListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693732546EAD900F71F5F /* AlbumListUITests.swift */; };
+		86C693932546EC2700F71F5F /* AlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693922546EC2700F71F5F /* AlbumListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +37,6 @@
 		86C6934E2546EAD600F71F5F /* AlbumList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C693512546EAD600F71F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86C693532546EAD600F71F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86C693552546EAD600F71F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86C693582546EAD600F71F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86C6935A2546EAD800F71F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86C6935D2546EAD800F71F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86C6935F2546EAD800F71F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		86C6936F2546EAD900F71F5F /* AlbumListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbumListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C693732546EAD900F71F5F /* AlbumListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListUITests.swift; sourceTree = "<group>"; };
 		86C693752546EAD900F71F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C693922546EC2700F71F5F /* AlbumListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +97,9 @@
 		86C693502546EAD600F71F5F /* AlbumList */ = {
 			isa = PBXGroup;
 			children = (
+				86C693912546EBF600F71F5F /* Controller */,
 				86C693512546EAD600F71F5F /* AppDelegate.swift */,
 				86C693532546EAD600F71F5F /* SceneDelegate.swift */,
-				86C693552546EAD600F71F5F /* ViewController.swift */,
-				86C693572546EAD600F71F5F /* Main.storyboard */,
 				86C6935A2546EAD800F71F5F /* Assets.xcassets */,
 				86C6935C2546EAD800F71F5F /* LaunchScreen.storyboard */,
 				86C6935F2546EAD800F71F5F /* Info.plist */,
@@ -128,6 +125,14 @@
 			path = AlbumListUITests;
 			sourceTree = "<group>";
 		};
+		86C693912546EBF600F71F5F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				86C693922546EC2700F71F5F /* AlbumListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +143,7 @@
 				86C6934A2546EAD600F71F5F /* Sources */,
 				86C6934B2546EAD600F71F5F /* Frameworks */,
 				86C6934C2546EAD600F71F5F /* Resources */,
+				86C693842546EAF700F71F5F /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -233,7 +239,6 @@
 			files = (
 				86C6935E2546EAD800F71F5F /* LaunchScreen.storyboard in Resources */,
 				86C6935B2546EAD800F71F5F /* Assets.xcassets in Resources */,
-				86C693592546EAD600F71F5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +258,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86C693842546EAF700F71F5F /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86C6934A2546EAD600F71F5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86C693562546EAD600F71F5F /* ViewController.swift in Sources */,
 				86C693522546EAD600F71F5F /* AppDelegate.swift in Sources */,
 				86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */,
+				86C693932546EC2700F71F5F /* AlbumListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +322,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		86C693572546EAD600F71F5F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				86C693582546EAD600F71F5F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		86C6935C2546EAD800F71F5F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
