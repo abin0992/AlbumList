@@ -5,8 +5,8 @@
 //  Created by Abin Baby on 26/10/20.
 //
 
-import XCTest
 @testable import AlbumList
+import XCTest
 
 class AlbumListTests: XCTestCase {
 
