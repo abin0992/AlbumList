@@ -54,11 +54,7 @@ class AlbumArtImageView: UIImageView {
     func addSpinner() {
         addSubview(spinner)
         spinner.translatesAutoresizingMaskIntoConstraints = false
-
-        // TODO - ask sami
-        spinner.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        spinner.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-
+        spinner.centerInSuperview()
         spinner.startAnimating()
     }
 

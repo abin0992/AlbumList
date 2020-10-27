@@ -26,8 +26,6 @@ enum Exception: Error {
             return "We are having a problem in decoding the data received. Please try again later."
         case .notFound:
             return "Our server seems to be taking a break. Please try again later."
-        default:
-            return "Unknown error."
         }
     }
 }

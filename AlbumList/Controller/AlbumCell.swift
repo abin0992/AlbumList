@@ -9,10 +9,54 @@ import TinyConstraints
 import UIKit
 
 class AlbumCell: UITableViewCell {
-    var safeArea: UILayoutGuide!
-    let albumArtImageView: AlbumArtImageView = AlbumArtImageView()
-    let nameLabel: UILabel = UILabel()
-    let artistLabel: UILabel = UILabel()
+
+    let albumArtImageView: AlbumArtImageView = {
+        let imageView: AlbumArtImageView = AlbumArtImageView()
+        imageView.height(60)
+        imageView.width(60)
+        return imageView
+    }()
+
+    private lazy var artistLabel: UILabel = {
+        let artistLabel: UILabel = UILabel()
+        artistLabel.translatesAutoresizingMaskIntoConstraints = false
+        artistLabel.lineBreakMode = .byTruncatingTail
+        artistLabel.contentMode = .center
+        artistLabel.font = UIFont.systemFont(ofSize: 13)
+        return artistLabel
+    }()
+
+    private lazy var nameLabel: UILabel = {
+        let nameLabel: UILabel = UILabel()
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.contentMode = .center
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        nameLabel.numberOfLines = 3
+        nameLabel.lineBreakMode = .byTruncatingTail
+        return nameLabel
+    }()
+
+    private lazy var labelStackView: UIStackView = {
+        let verticalStackView: UIStackView = UIStackView()
+        verticalStackView.translatesAutoresizingMaskIntoConstraints = false
+        verticalStackView.axis = .vertical
+        verticalStackView.distribution = .fillProportionally
+        verticalStackView.spacing = 3
+        verticalStackView.alignment = .top
+        verticalStackView.addArrangedSubviews([nameLabel, artistLabel])
+        return verticalStackView
+    }()
+
+    private lazy var contentStackView: UIStackView = {
+        let horizontalStackView: UIStackView = UIStackView()
+        horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
+        horizontalStackView.axis = .horizontal
+        horizontalStackView.distribution = .fillProportionally
+        horizontalStackView.alignment = .center
+        horizontalStackView.addArrangedSubviews([albumArtImageView, labelStackView])
+        horizontalStackView.spacing = 10
+        return horizontalStackView
+    }()
 
     // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -27,44 +71,18 @@ class AlbumCell: UITableViewCell {
     // MARK: - Setup
 
     func setupView() {
-        safeArea = layoutMarginsGuide
-        setupImageView()
-        setupNameLabel()
-        setupArtistLabel()
+        contentView.addSubview(contentStackView)
+        contentStackView.leadingToSuperview(offset: 10)
+        contentStackView.edgesToSuperview(excluding: .leading)
     }
 
-    func setupImageView() {
-        addSubview(albumArtImageView)
-        albumArtImageView.translatesAutoresizingMaskIntoConstraints = false
-        albumArtImageView.leading(to: safeArea)
-        albumArtImageView.centerY(to: self.contentView)
-        albumArtImageView.width(40)
-        albumArtImageView.height(40)
-    }
+    // MARK: - Display information
 
-    func setupNameLabel() {
-        addSubview(nameLabel)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        nameLabel.leadingToTrailing(of: albumArtImageView, offset: 10)
-        nameLabel.top(to: self.contentView, offset: 5)
-        nameLabel.trailing(to: safeArea, offset: -10)
-        nameLabel.height(50)
-        nameLabel.contentMode = .center
-        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        nameLabel.numberOfLines = 2
-    }
-
-    func setupArtistLabel() {
-        addSubview(artistLabel)
-        artistLabel.translatesAutoresizingMaskIntoConstraints = false
-
-        artistLabel.leading(to: nameLabel)
-        artistLabel.trailing(to: nameLabel)
-        artistLabel.topToBottom(of: nameLabel, offset: 2)
-        artistLabel.bottom(to: safeArea, offset: -5)
-        artistLabel.height(10)
-        artistLabel.contentMode = .center
-        artistLabel.font = UIFont.systemFont(ofSize: 13)
+    func populateCell(with album: Album) {
+        nameLabel.text = album.name
+        artistLabel.text = album.artistName
+        if let imageUrl: URL = URL(string: album.artworkUrl100) {
+            albumArtImageView.loadImage(from: imageUrl)
+        }
     }
 }

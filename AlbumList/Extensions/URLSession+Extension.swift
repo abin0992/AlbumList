@@ -16,7 +16,7 @@ extension URLSession {
             }
             guard let response = response, let data = data else {
                 let _: Error = NSError(domain: "error", code: 0, userInfo: nil)
-                result(.failure(Exception.invalidFormat))
+                result(.failure(Exception.undefined))
                 return
             }
             result(.success((response, data)))
