@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		86C693692546EAD900F71F5F /* AlbumListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693682546EAD900F71F5F /* AlbumListTests.swift */; };
 		86C693742546EAD900F71F5F /* AlbumListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693732546EAD900F71F5F /* AlbumListUITests.swift */; };
 		86C693932546EC2700F71F5F /* AlbumListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693922546EC2700F71F5F /* AlbumListController.swift */; };
+		86C693A2254708C700F71F5F /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 86C693A1254708C700F71F5F /* TinyConstraints */; };
+		86C693AA25470E5600F71F5F /* AlbumAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693A925470E5600F71F5F /* AlbumAPI.swift */; };
+		86C693C8254721C900F71F5F /* Exceptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693C7254721C900F71F5F /* Exceptions.swift */; };
+		86C693D025480E9700F71F5F /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693CF25480E9700F71F5F /* AlbumCell.swift */; };
+		86C693D5254821F400F71F5F /* AlbumArtImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693D4254821F400F71F5F /* AlbumArtImageView.swift */; };
+		86C693DA2548397C00F71F5F /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693D92548397C00F71F5F /* URLSession+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,11 @@
 		86C693732546EAD900F71F5F /* AlbumListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListUITests.swift; sourceTree = "<group>"; };
 		86C693752546EAD900F71F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86C693922546EC2700F71F5F /* AlbumListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListController.swift; sourceTree = "<group>"; };
+		86C693A925470E5600F71F5F /* AlbumAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAPI.swift; sourceTree = "<group>"; };
+		86C693C7254721C900F71F5F /* Exceptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exceptions.swift; sourceTree = "<group>"; };
+		86C693CF25480E9700F71F5F /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		86C693D4254821F400F71F5F /* AlbumArtImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumArtImageView.swift; sourceTree = "<group>"; };
+		86C693D92548397C00F71F5F /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C693A2254708C700F71F5F /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +115,10 @@
 				86C6935A2546EAD800F71F5F /* Assets.xcassets */,
 				86C6935C2546EAD800F71F5F /* LaunchScreen.storyboard */,
 				86C6935F2546EAD800F71F5F /* Info.plist */,
+				86C693A925470E5600F71F5F /* AlbumAPI.swift */,
+				86C693C7254721C900F71F5F /* Exceptions.swift */,
+				86C693D4254821F400F71F5F /* AlbumArtImageView.swift */,
+				86C693D92548397C00F71F5F /* URLSession+Extension.swift */,
 			);
 			path = AlbumList;
 			sourceTree = "<group>";
@@ -129,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				86C693922546EC2700F71F5F /* AlbumListController.swift */,
+				86C693CF25480E9700F71F5F /* AlbumCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +167,9 @@
 			dependencies = (
 			);
 			name = AlbumList;
+			packageProductDependencies = (
+				86C693A1254708C700F71F5F /* TinyConstraints */,
+			);
 			productName = AlbumList;
 			productReference = 86C6934E2546EAD600F71F5F /* AlbumList.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +241,9 @@
 				Base,
 			);
 			mainGroup = 86C693452546EAD600F71F5F;
+			packageReferences = (
+				86C693A0254708C700F71F5F /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 86C6934F2546EAD600F71F5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,9 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C693D5254821F400F71F5F /* AlbumArtImageView.swift in Sources */,
+				86C693AA25470E5600F71F5F /* AlbumAPI.swift in Sources */,
 				86C693522546EAD600F71F5F /* AppDelegate.swift in Sources */,
+				86C693C8254721C900F71F5F /* Exceptions.swift in Sources */,
+				86C693DA2548397C00F71F5F /* URLSession+Extension.swift in Sources */,
 				86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */,
 				86C693932546EC2700F71F5F /* AlbumListController.swift in Sources */,
+				86C693D025480E9700F71F5F /* AlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86C693A0254708C700F71F5F /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86C693A1254708C700F71F5F /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86C693A0254708C700F71F5F /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86C693462546EAD600F71F5F /* Project object */;
 }
