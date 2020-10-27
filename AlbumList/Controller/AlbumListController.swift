@@ -44,8 +44,8 @@ class AlbumListController: UIViewController {
 
         tableView.register(AlbumCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 85
-        tableView.allowsSelection = false
     }
 
     // MARK: - API call
@@ -74,8 +74,9 @@ class AlbumListController: UIViewController {
 
 }
 
-extension AlbumListController: UITableViewDataSource {
+extension AlbumListController: UITableViewDataSource, UITableViewDelegate {
 
+    // MARK: - Data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         albumsList.count
     }
@@ -86,5 +87,13 @@ extension AlbumListController: UITableViewDataSource {
         let album: Album = albumsList[indexPath.row]
         cell.populateCell(with: album)
         return cell
+    }
+
+    // MARK: - Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedAlbum = albumsList[indexPath.row]
+        let detailViewController: AlbumDetailViewController = AlbumDetailViewController()
+        detailViewController.album = selectedAlbum
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

@@ -23,6 +23,7 @@
 		86C693E32548503C00F71F5F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693E22548503C00F71F5F /* Album.swift */; };
 		86C693EB254858F500F71F5F /* UIStackView+ArrangedSubiews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */; };
 		86C694002548616600F71F5F /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693FF2548616600F71F5F /* String+Constants.swift */; };
+		86C6940B254863C900F71F5F /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		86C693E22548503C00F71F5F /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ArrangedSubiews.swift"; sourceTree = "<group>"; };
 		86C693FF2548616600F71F5F /* String+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
+		86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				86C693922546EC2700F71F5F /* AlbumListController.swift */,
 				86C693CF25480E9700F71F5F /* AlbumCell.swift */,
+				86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				86C693522546EAD600F71F5F /* AppDelegate.swift in Sources */,
 				86C693C8254721C900F71F5F /* Exceptions.swift in Sources */,
 				86C693DA2548397C00F71F5F /* URLSession+Extension.swift in Sources */,
+				86C6940B254863C900F71F5F /* AlbumDetailViewController.swift in Sources */,
 				86C693EB254858F500F71F5F /* UIStackView+ArrangedSubiews.swift in Sources */,
 				86C693E32548503C00F71F5F /* Album.swift in Sources */,
 				86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */,
