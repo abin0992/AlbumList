@@ -165,6 +165,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8674F6802549CE7C0076C002 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				86C693D4254821F400F71F5F /* AlbumArtImageView.swift */,
+				86C6941B254887AB00F71F5F /* DetailLabel.swift */,
+			);
+			path = "Custom Components";
+			sourceTree = "<group>";
+		};
 		86C693452546EAD600F71F5F = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +197,7 @@
 		86C693502546EAD600F71F5F /* AlbumList */ = {
 			isa = PBXGroup;
 			children = (
-				86C693D4254821F400F71F5F /* AlbumArtImageView.swift */,
+				8674F6802549CE7C0076C002 /* Custom Components */,
 				8674F66F2549BBA30076C002 /* Application */,
 				86C693912546EBF600F71F5F /* Controller */,
 				86C693FE2548615100F71F5F /* Extensions */,
@@ -247,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */,
-				86C6941B254887AB00F71F5F /* DetailLabel.swift */,
 				86C693FF2548616600F71F5F /* String+Constants.swift */,
 				86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */,
 				86C693D92548397C00F71F5F /* URLSession+Extension.swift */,
