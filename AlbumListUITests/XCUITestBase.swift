@@ -11,7 +11,7 @@ class XCUITestBase: XCTestCase {
     let app: XCUIApplication = XCUIApplication()
 
     let defaultLaunchArguments: [[String]] = {
-        let launchArguments: [[String]] = [["-StartFromCleanState", "YES", "-Snapshot"]]
+        let launchArguments: [[String]] = [["-StartFromCleanState", "YES", "-Snapshot", "--uitesting"]]
         return launchArguments
     }()
 

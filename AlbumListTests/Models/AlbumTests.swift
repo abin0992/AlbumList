@@ -5,28 +5,28 @@
 //  Created by Abin Baby on 28/10/20.
 //
 
+@testable import AlbumList
 import XCTest
 
-class AlbumTests: XCUITestBase {
+class AlbumTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    var album: Album = Album(artistName: "",
+                             id: "",
+                             releaseDate: "",
+                             name: "",
+                             copyright: "",
+                             artworkUrl100: "",
+                             genres: [Genre(name: "")],
+                             url: "")
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testAlbumInit() {
+        XCTAssertEqual(album.artistName, "")
+        XCTAssertEqual(album.id, "")
+        XCTAssertEqual(album.releaseDate, "")
+        XCTAssertEqual(album.name, "")
+        XCTAssertEqual(album.copyright, "")
+        XCTAssertEqual(album.artworkUrl100, "")
+        XCTAssertEqual(album.url, "")
     }
 
 }
