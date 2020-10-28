@@ -153,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				86C693512546EAD600F71F5F /* AppDelegate.swift */,
+				86C6935F2546EAD800F71F5F /* Info.plist */,
 				86C6935C2546EAD800F71F5F /* LaunchScreen.storyboard */,
 				86C693532546EAD600F71F5F /* SceneDelegate.swift */,
 			);
@@ -213,7 +214,6 @@
 				86C693912546EBF600F71F5F /* Controller */,
 				8674F6802549CE7C0076C002 /* Custom Components */,
 				86C693FE2548615100F71F5F /* Extensions */,
-				86C6935F2546EAD800F71F5F /* Info.plist */,
 				86C693E12548502400F71F5F /* Models */,
 				8674F66E2549BB970076C002 /* Network */,
 				8674F6732549BBD20076C002 /* Resources */,
@@ -224,12 +224,11 @@
 		86C693672546EAD900F71F5F /* AlbumListTests */ = {
 			isa = PBXGroup;
 			children = (
+				86C6942B2549654900F71F5F /* Mocks */,
 				8674F6652549B7530076C002 /* Models */,
 				8674F62825497A720076C002 /* Network */,
-				86C694342549676C00F71F5F /* View Controllers */,
-				86C6942B2549654900F71F5F /* Mocks */,
 				86C694252549651B00F71F5F /* Supporting files */,
-				86C6936A2546EAD900F71F5F /* Info.plist */,
+				86C694342549676C00F71F5F /* View Controllers */,
 			);
 			path = AlbumListTests;
 			sourceTree = "<group>";
@@ -277,6 +276,7 @@
 		86C694252549651B00F71F5F /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				86C6936A2546EAD900F71F5F /* Info.plist */,
 				86C694262549653D00F71F5F /* test_album.json */,
 			);
 			path = "Supporting files";
@@ -294,8 +294,8 @@
 		86C694342549676C00F71F5F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				86C6943B254967BC00F71F5F /* AlbumListControllerTests.swift */,
 				8674F63725497EEE0076C002 /* AlbumDetailViewControllerTests.swift */,
+				86C6943B254967BC00F71F5F /* AlbumListControllerTests.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
