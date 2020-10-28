@@ -13,8 +13,9 @@
 		8674F65025498DBF0076C002 /* XCUITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F64F25498DBF0076C002 /* XCUITestBase.swift */; };
 		8674F658254995E70076C002 /* AlbumListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F657254995E70076C002 /* AlbumListViewTests.swift */; };
 		8674F65D2549A28D0076C002 /* AccessibilityIdentifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */; };
-		8674F6612549A4F50076C002 /* AccessibilityIdentifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */; };
 		8674F6672549B7720076C002 /* AlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F6662549B7720076C002 /* AlbumTests.swift */; };
+		8674F68B2549D9BD0076C002 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F68A2549D9BD0076C002 /* String+DateFormatter.swift */; };
+		8674F6992549DB4B0076C002 /* AccessibilityIdentifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */; };
 		86C693522546EAD600F71F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693512546EAD600F71F5F /* AppDelegate.swift */; };
 		86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693532546EAD600F71F5F /* SceneDelegate.swift */; };
 		86C6935B2546EAD800F71F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C6935A2546EAD800F71F5F /* Assets.xcassets */; };
@@ -28,7 +29,7 @@
 		86C693DA2548397C00F71F5F /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693D92548397C00F71F5F /* URLSession+Extension.swift */; };
 		86C693E32548503C00F71F5F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693E22548503C00F71F5F /* Album.swift */; };
 		86C693EB254858F500F71F5F /* UIStackView+ArrangedSubiews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */; };
-		86C694002548616600F71F5F /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693FF2548616600F71F5F /* String+Constants.swift */; };
+		86C694002548616600F71F5F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693FF2548616600F71F5F /* Constants.swift */; };
 		86C6940B254863C900F71F5F /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */; };
 		86C6941C254887AB00F71F5F /* DetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6941B254887AB00F71F5F /* DetailLabel.swift */; };
 		86C6942125495FF000F71F5F /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6942025495FEF00F71F5F /* AlbumService.swift */; };
@@ -62,6 +63,7 @@
 		8674F657254995E70076C002 /* AlbumListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewTests.swift; sourceTree = "<group>"; };
 		8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifer.swift; sourceTree = "<group>"; };
 		8674F6662549B7720076C002 /* AlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTests.swift; sourceTree = "<group>"; };
+		8674F68A2549D9BD0076C002 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
 		86C6934E2546EAD600F71F5F /* AlbumList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C693512546EAD600F71F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86C693532546EAD600F71F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		86C693D92548397C00F71F5F /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		86C693E22548503C00F71F5F /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ArrangedSubiews.swift"; sourceTree = "<group>"; };
-		86C693FF2548616600F71F5F /* String+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
+		86C693FF2548616600F71F5F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		86C6941B254887AB00F71F5F /* DetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLabel.swift; sourceTree = "<group>"; };
 		86C6942025495FEF00F71F5F /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				86C693512546EAD600F71F5F /* AppDelegate.swift */,
+				86C6935F2546EAD800F71F5F /* Info.plist */,
 				86C6935C2546EAD800F71F5F /* LaunchScreen.storyboard */,
 				86C693532546EAD600F71F5F /* SceneDelegate.swift */,
 			);
@@ -163,6 +166,24 @@
 				86C6935A2546EAD800F71F5F /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8674F6802549CE7C0076C002 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				86C693D4254821F400F71F5F /* AlbumArtImageView.swift */,
+				86C6941B254887AB00F71F5F /* DetailLabel.swift */,
+			);
+			path = "Custom Components";
+			sourceTree = "<group>";
+		};
+		8674F6922549D9F00076C002 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */,
+				86C693FF2548616600F71F5F /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		86C693452546EAD600F71F5F = {
@@ -188,11 +209,11 @@
 		86C693502546EAD600F71F5F /* AlbumList */ = {
 			isa = PBXGroup;
 			children = (
-				86C693D4254821F400F71F5F /* AlbumArtImageView.swift */,
 				8674F66F2549BBA30076C002 /* Application */,
+				8674F6922549D9F00076C002 /* Constants */,
 				86C693912546EBF600F71F5F /* Controller */,
+				8674F6802549CE7C0076C002 /* Custom Components */,
 				86C693FE2548615100F71F5F /* Extensions */,
-				86C6935F2546EAD800F71F5F /* Info.plist */,
 				86C693E12548502400F71F5F /* Models */,
 				8674F66E2549BB970076C002 /* Network */,
 				8674F6732549BBD20076C002 /* Resources */,
@@ -203,12 +224,12 @@
 		86C693672546EAD900F71F5F /* AlbumListTests */ = {
 			isa = PBXGroup;
 			children = (
+				86C6936A2546EAD900F71F5F /* Info.plist */,
+				86C6942B2549654900F71F5F /* Mocks */,
 				8674F6652549B7530076C002 /* Models */,
 				8674F62825497A720076C002 /* Network */,
-				86C694342549676C00F71F5F /* View Controllers */,
-				86C6942B2549654900F71F5F /* Mocks */,
 				86C694252549651B00F71F5F /* Supporting files */,
-				86C6936A2546EAD900F71F5F /* Info.plist */,
+				86C694342549676C00F71F5F /* View Controllers */,
 			);
 			path = AlbumListTests;
 			sourceTree = "<group>";
@@ -246,9 +267,7 @@
 		86C693FE2548615100F71F5F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */,
-				86C6941B254887AB00F71F5F /* DetailLabel.swift */,
-				86C693FF2548616600F71F5F /* String+Constants.swift */,
+				8674F68A2549D9BD0076C002 /* String+DateFormatter.swift */,
 				86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */,
 				86C693D92548397C00F71F5F /* URLSession+Extension.swift */,
 			);
@@ -275,8 +294,8 @@
 		86C694342549676C00F71F5F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				86C6943B254967BC00F71F5F /* AlbumListControllerTests.swift */,
 				8674F63725497EEE0076C002 /* AlbumDetailViewControllerTests.swift */,
+				86C6943B254967BC00F71F5F /* AlbumListControllerTests.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -448,10 +467,11 @@
 				86C6940B254863C900F71F5F /* AlbumDetailViewController.swift in Sources */,
 				8674F65D2549A28D0076C002 /* AccessibilityIdentifer.swift in Sources */,
 				86C693EB254858F500F71F5F /* UIStackView+ArrangedSubiews.swift in Sources */,
+				8674F68B2549D9BD0076C002 /* String+DateFormatter.swift in Sources */,
 				86C693E32548503C00F71F5F /* Album.swift in Sources */,
 				86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */,
 				86C693932546EC2700F71F5F /* AlbumListController.swift in Sources */,
-				86C694002548616600F71F5F /* String+Constants.swift in Sources */,
+				86C694002548616600F71F5F /* Constants.swift in Sources */,
 				86C6941C254887AB00F71F5F /* DetailLabel.swift in Sources */,
 				86C693D025480E9700F71F5F /* AlbumCell.swift in Sources */,
 			);
@@ -475,7 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8674F658254995E70076C002 /* AlbumListViewTests.swift in Sources */,
-				8674F6612549A4F50076C002 /* AccessibilityIdentifer.swift in Sources */,
+				8674F6992549DB4B0076C002 /* AccessibilityIdentifer.swift in Sources */,
 				8674F65025498DBF0076C002 /* XCUITestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +650,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AlbumList/Info.plist;
+				INFOPLIST_FILE = AlbumList/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,7 +669,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AlbumList/Info.plist;
+				INFOPLIST_FILE = AlbumList/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

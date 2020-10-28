@@ -69,12 +69,12 @@ class AlbumDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .white
         view.accessibilityIdentifier = AccessibilityIdentifier.AlbumDetailView.rawValue
         safeArea = view.layoutMarginsGuide
 
         setupView()
-
         setupData()
 
     }
@@ -156,7 +156,6 @@ class AlbumDetailViewController: UIViewController {
         visitStoreButton.leading(to: safeArea, offset: 20)
         visitStoreButton.trailing(to: safeArea, offset: -20)
         visitStoreButton.bottom(to: safeArea, offset: -20)
-        visitStoreButton.centerX(to: view)
         visitStoreButton.height(40)
 
         visitStoreButton.addTarget(self,
@@ -177,26 +176,11 @@ class AlbumDetailViewController: UIViewController {
         }
     }
 
-    // TODO: ask sami
     func generateGenreLabel(from genres: [Genre]) -> String {
-        var genreString: String = "Genre: "
-        for genre in genres {
-            genreString.append("\(genre.name)"+", ")
-        }
-
-        return genreString
+        "Genre: " + genres.map { $0.name }.joined(separator: ", ")
     }
 
     func generateReleaseDate(from dateString: String) -> String {
-        let inputFormatter: DateFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy-MM-dd"
-        guard let releaseDate = inputFormatter.date(from: dateString) else {
-            fatalError("Date format not found")
-        }
-        let outputFormatter: DateFormatter = DateFormatter()
-        outputFormatter.dateFormat = "MMMM d, yyyy"
-        let releaseDateString: String = outputFormatter.string(from: releaseDate)
-
-        return "Released \(releaseDateString)"
+        "Released " + dateString.formattedDateFromString(withInputFormat: "yyyy-MM-dd", outputFormat: "MMMM d, yyyy")
     }
 }

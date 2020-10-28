@@ -15,7 +15,7 @@ class NetworkManager {
 
     func fetch <T: Decodable>( completion: @escaping (Result<T, Exception>) -> Void) {
 
-        guard let url = URL(string: String.Constants.albumsListUrl) else {
+        guard let url = URL(string: Constants.albumsListUrl) else {
             fatalError("Albums list URL not found")
         }
 

@@ -85,7 +85,15 @@ class AlbumListController: UIViewController {
                     self.tableView.backgroundView = nil
                 }
             case .failure:
-                print("failed")
+                let alertController: UIAlertController = UIAlertController(title: "Error", message: "There has been a problem fetching the data. Sorry.", preferredStyle: .alert)
+                let defaultAction: UIAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+
+                alertController.addAction(defaultAction)
+
+                DispatchQueue.main.async {
+                    self.tableView.backgroundView = nil
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }

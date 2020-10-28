@@ -12,6 +12,7 @@ disabled_rules:
   - todo # next to enable again
   - xctfail_message
   - unused_optional_binding
+  - no_grouping_extension
 excluded:
   - .build
 opt_in_rules:

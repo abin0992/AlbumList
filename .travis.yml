@@ -1,0 +1,10 @@
+language: objective-c
+osx_image: xcode12.2
+
+cache:
+  directories:
+    - .build
+
+script:
+  - xcodebuild -scheme AlbumList -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12 Pro,OS=14.2' build
+
