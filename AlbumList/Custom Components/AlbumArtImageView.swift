@@ -43,8 +43,10 @@ class AlbumArtImageView: UIImageView {
                     self.image = albumArtImage
                     self.removeSpinner()
                 }
-            case .failure(let error):
-                print("image loading failed--->", error)
+            case .failure:
+                DispatchQueue.main.async {
+                    self.image = #imageLiteral(resourceName: "placeholderImage.pdf")
+                }
              }
         }
 

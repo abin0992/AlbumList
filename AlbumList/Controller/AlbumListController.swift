@@ -91,7 +91,7 @@ class AlbumListController: UIViewController {
                 alertController.addAction(defaultAction)
 
                 DispatchQueue.main.async {
-                    self.tableView.backgroundView?.isHidden = true
+                    self.tableView.backgroundView = nil
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
