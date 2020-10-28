@@ -15,6 +15,7 @@
 		8674F65D2549A28D0076C002 /* AccessibilityIdentifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */; };
 		8674F6672549B7720076C002 /* AlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F6662549B7720076C002 /* AlbumTests.swift */; };
 		8674F68B2549D9BD0076C002 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F68A2549D9BD0076C002 /* String+DateFormatter.swift */; };
+		8674F6992549DB4B0076C002 /* AccessibilityIdentifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674F65C2549A28D0076C002 /* AccessibilityIdentifer.swift */; };
 		86C693522546EAD600F71F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693512546EAD600F71F5F /* AppDelegate.swift */; };
 		86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693532546EAD600F71F5F /* SceneDelegate.swift */; };
 		86C6935B2546EAD800F71F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C6935A2546EAD800F71F5F /* Assets.xcassets */; };
@@ -494,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8674F658254995E70076C002 /* AlbumListViewTests.swift in Sources */,
+				8674F6992549DB4B0076C002 /* AccessibilityIdentifer.swift in Sources */,
 				8674F65025498DBF0076C002 /* XCUITestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
