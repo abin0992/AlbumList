@@ -181,15 +181,6 @@ class AlbumDetailViewController: UIViewController {
     }
 
     func generateReleaseDate(from dateString: String) -> String {
-        let inputFormatter: DateFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy-MM-dd"
-        guard let releaseDate = inputFormatter.date(from: dateString) else {
-            fatalError("Date format not found")
-        }
-        let outputFormatter: DateFormatter = DateFormatter()
-        outputFormatter.dateFormat = "MMMM d, yyyy"
-        let releaseDateString: String = outputFormatter.string(from: releaseDate)
-
-        return "Released \(releaseDateString)"
+        "Released " + dateString.formattedDateFromString(withInputFormat: "yyyy-MM-dd", outputFormat: "MMMM d, yyyy")
     }
 }

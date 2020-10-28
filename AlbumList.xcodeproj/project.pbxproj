@@ -224,6 +224,7 @@
 		86C693672546EAD900F71F5F /* AlbumListTests */ = {
 			isa = PBXGroup;
 			children = (
+				86C6936A2546EAD900F71F5F /* Info.plist */,
 				86C6942B2549654900F71F5F /* Mocks */,
 				8674F6652549B7530076C002 /* Models */,
 				8674F62825497A720076C002 /* Network */,
@@ -276,7 +277,6 @@
 		86C694252549651B00F71F5F /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				86C6936A2546EAD900F71F5F /* Info.plist */,
 				86C694262549653D00F71F5F /* test_album.json */,
 			);
 			path = "Supporting files";
@@ -650,7 +650,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AlbumList/Info.plist;
+				INFOPLIST_FILE = AlbumList/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -669,7 +669,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = AlbumList/Info.plist;
+				INFOPLIST_FILE = AlbumList/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
