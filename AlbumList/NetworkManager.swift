@@ -34,7 +34,7 @@ final class NetworkManager {
                     completion(.failure(Exception.invalidFormat))
                 }
             case .failure:
-                    completion(.failure(Exception.invalidFormat))
+                    completion(.failure(Exception.undefined))
              }
         }
         task.resume()

@@ -1,0 +1,49 @@
+{
+  "feed": {
+    "title": "Coming Soon",
+    "id": "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/1/explicit.json",
+    "author": {
+      "name": "iTunes Store",
+      "uri": "http://wwww.apple.com/us/itunes/"
+    },
+    "links": [
+      {
+        "self": "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/1/explicit.json"
+      },
+      {
+        "alternate": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=1396220241&app=music"
+      }
+    ],
+    "copyright": "Copyright © 2018 Apple Inc. All rights reserved.",
+    "country": "us",
+    "icon": "http://itunes.apple.com/favicon.ico",
+    "updated": "2020-10-26T01:49:43.000-07:00",
+    "results": [
+      {
+        "artistName": "Miley Cyrus",
+        "id": "1536966025",
+        "releaseDate": "2020-11-27",
+        "name": "Plastic Hearts",
+        "kind": "album",
+        "copyright": "℗ 2020 RCA Records, a division of Sony Music Entertainment",
+        "artistId": "137057909",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/miley-cyrus/137057909?app=music",
+        "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/b9/c9/49/b9c949e6-d635-be2f-971d-81145effcf3d/886448810216.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "14",
+            "name": "Pop",
+            "url": "https://itunes.apple.com/us/genre/id14"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/plastic-hearts/1536966025?app=music"
+      }
+    ]
+  }
+}

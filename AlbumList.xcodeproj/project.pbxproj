@@ -24,6 +24,10 @@
 		86C693EB254858F500F71F5F /* UIStackView+ArrangedSubiews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */; };
 		86C694002548616600F71F5F /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C693FF2548616600F71F5F /* String+Constants.swift */; };
 		86C6940B254863C900F71F5F /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */; };
+		86C6941C254887AB00F71F5F /* DetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6941B254887AB00F71F5F /* DetailLabel.swift */; };
+		86C6942125495FF000F71F5F /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6942025495FEF00F71F5F /* AlbumService.swift */; };
+		86C694272549653D00F71F5F /* test_album.json in Resources */ = {isa = PBXBuildFile; fileRef = 86C694262549653D00F71F5F /* test_album.json */; };
+		86C6942D2549656300F71F5F /* MockAlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C6942C2549656300F71F5F /* MockAlbumService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ArrangedSubiews.swift"; sourceTree = "<group>"; };
 		86C693FF2548616600F71F5F /* String+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
 		86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		86C6941B254887AB00F71F5F /* DetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLabel.swift; sourceTree = "<group>"; };
+		86C6942025495FEF00F71F5F /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		86C694262549653D00F71F5F /* test_album.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test_album.json; sourceTree = "<group>"; };
+		86C6942C2549656300F71F5F /* MockAlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlbumService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,8 @@
 		86C693672546EAD900F71F5F /* AlbumListTests */ = {
 			isa = PBXGroup;
 			children = (
+				86C6942B2549654900F71F5F /* Mocks */,
+				86C694252549651B00F71F5F /* Supporting files */,
 				86C693682546EAD900F71F5F /* AlbumListTests.swift */,
 				86C6936A2546EAD900F71F5F /* Info.plist */,
 			);
@@ -152,9 +162,10 @@
 		86C693912546EBF600F71F5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				86C693922546EC2700F71F5F /* AlbumListController.swift */,
 				86C693CF25480E9700F71F5F /* AlbumCell.swift */,
 				86C6940A254863C900F71F5F /* AlbumDetailViewController.swift */,
+				86C693922546EC2700F71F5F /* AlbumListController.swift */,
+				86C6942025495FEF00F71F5F /* AlbumService.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,8 +185,25 @@
 				86C693EA254858F500F71F5F /* UIStackView+ArrangedSubiews.swift */,
 				86C693D92548397C00F71F5F /* URLSession+Extension.swift */,
 				86C693FF2548616600F71F5F /* String+Constants.swift */,
+				86C6941B254887AB00F71F5F /* DetailLabel.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86C694252549651B00F71F5F /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				86C694262549653D00F71F5F /* test_album.json */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		86C6942B2549654900F71F5F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				86C6942C2549656300F71F5F /* MockAlbumService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C694272549653D00F71F5F /* test_album.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +367,7 @@
 				86C693D5254821F400F71F5F /* AlbumArtImageView.swift in Sources */,
 				86C693AA25470E5600F71F5F /* NetworkManager.swift in Sources */,
 				86C693522546EAD600F71F5F /* AppDelegate.swift in Sources */,
+				86C6942125495FF000F71F5F /* AlbumService.swift in Sources */,
 				86C693C8254721C900F71F5F /* Exceptions.swift in Sources */,
 				86C693DA2548397C00F71F5F /* URLSession+Extension.swift in Sources */,
 				86C6940B254863C900F71F5F /* AlbumDetailViewController.swift in Sources */,
@@ -346,6 +376,7 @@
 				86C693542546EAD600F71F5F /* SceneDelegate.swift in Sources */,
 				86C693932546EC2700F71F5F /* AlbumListController.swift in Sources */,
 				86C694002548616600F71F5F /* String+Constants.swift in Sources */,
+				86C6941C254887AB00F71F5F /* DetailLabel.swift in Sources */,
 				86C693D025480E9700F71F5F /* AlbumCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86C693692546EAD900F71F5F /* AlbumListTests.swift in Sources */,
+				86C6942D2549656300F71F5F /* MockAlbumService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AlbumList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,6 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AlbumList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -14,6 +14,7 @@ class AlbumListController: UIViewController {
     var safeArea: UILayoutGuide!
     let cellIdentifier: String = "albumCell"
     var albumsList: [Album] = [Album]()
+    var albumService: AlbumService = AlbumService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class AlbumListController: UIViewController {
         addNavigationBar()
         setupTableView()
 
-        fetchAlbumLists()
+        fetchAlbumList()
     }
 
     // MARK: - Setup View
@@ -49,8 +50,8 @@ class AlbumListController: UIViewController {
     }
 
     // MARK: - API call
-    private func fetchAlbumLists() {
-        NetworkManager.sharedInstance.fetch { (result: Swift.Result<AlbumList, Exception>) in
+    private func fetchAlbumList() {
+        albumService.fetchAlbumLists { (result: Swift.Result<AlbumList, Exception>) in
             switch result {
             case .success(let dataArray):
                 self.albumsList = dataArray.feed.results
@@ -61,17 +62,7 @@ class AlbumListController: UIViewController {
                 print("failed")
             }
         }
-     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
 }
 
 extension AlbumListController: UITableViewDataSource, UITableViewDelegate {
@@ -91,7 +82,7 @@ extension AlbumListController: UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedAlbum = albumsList[indexPath.row]
+        let selectedAlbum: Album = albumsList[indexPath.row]
         let detailViewController: AlbumDetailViewController = AlbumDetailViewController()
         detailViewController.album = selectedAlbum
         self.navigationController?.pushViewController(detailViewController, animated: true)

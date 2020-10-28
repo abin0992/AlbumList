@@ -10,7 +10,7 @@ import UIKit
 
 class AlbumCell: UITableViewCell {
 
-    let albumArtImageView: AlbumArtImageView = {
+    private lazy var albumArtImageView: AlbumArtImageView = {
         let imageView: AlbumArtImageView = AlbumArtImageView()
         imageView.height(60)
         imageView.width(60)

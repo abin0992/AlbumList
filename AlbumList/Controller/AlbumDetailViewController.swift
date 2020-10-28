@@ -12,114 +12,132 @@ class AlbumDetailViewController: UIViewController {
 
     var album: Album?
     var safeArea: UILayoutGuide!
-    let albumArtImageView: AlbumArtImageView = AlbumArtImageView()
-    let albumNameLabel: UILabel = UILabel()
-    let artistNameLabel: UILabel = UILabel()
-    let genreLabel: UILabel = UILabel()
-    let releaseDateLabel: UILabel = UILabel()
-    let copyrightLabel: UILabel = UILabel()
-    let visitStoreButton: UIButton = UIButton()
+
+    private lazy var albumArtImageView: AlbumArtImageView = {
+        let imageView: AlbumArtImageView = AlbumArtImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+
+    private lazy var albumNameLabel: DetailLabel = {
+        let albumNameLabel: DetailLabel = DetailLabel()
+        albumNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        return albumNameLabel
+    }()
+
+    private lazy var artistNameLabel: DetailLabel = {
+        let artistNameLabel: DetailLabel = DetailLabel()
+        artistNameLabel.font = UIFont.systemFont(ofSize: 13)
+        artistNameLabel.textColor = .darkGray
+        return artistNameLabel
+    }()
+
+    private lazy var genreLabel: DetailLabel = {
+        let genreLabel: DetailLabel = DetailLabel()
+        genreLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        genreLabel.textColor = .darkGray
+        return genreLabel
+    }()
+
+    private lazy var releaseDateLabel: DetailLabel = {
+        let releaseDateLabel: DetailLabel = DetailLabel()
+        releaseDateLabel.font = UIFont.systemFont(ofSize: 13)
+        releaseDateLabel.textColor = .gray
+        return releaseDateLabel
+    }()
+
+    private lazy var copyrightLabel: DetailLabel = {
+        let copyrightLabel: DetailLabel = DetailLabel()
+        copyrightLabel.font = UIFont.systemFont(ofSize: 13)
+        copyrightLabel.textColor = .lightGray
+        return copyrightLabel
+    }()
+
+    private lazy var visitStoreButton: UIButton = {
+        let storeButton: UIButton = UIButton()
+        storeButton.backgroundColor = .clear
+        storeButton.layer.cornerRadius = 5
+        storeButton.layer.borderWidth = 1
+        storeButton.layer.borderColor = UIColor.systemBlue.cgColor
+        storeButton.setTitle("View in iTunes store", for: .normal)
+        storeButton.setTitleColor(.systemBlue, for: .normal)
+        storeButton.translatesAutoresizingMaskIntoConstraints = false
+        return storeButton
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         safeArea = view.layoutMarginsGuide
+
+        setupView()
+
+        setupData()
+
+    }
+
+    func setupView() {
         setupImageView()
         setupAlbumName()
         setupArtistName()
         setupGenre()
         setupReleaseDate()
         setupCopyright()
-        setupData()
         setupStoreButton()
     }
 
     func setupImageView() {
         view.addSubview(albumArtImageView)
-        albumArtImageView.translatesAutoresizingMaskIntoConstraints = false
         albumArtImageView.centerX(to: view)
-        albumArtImageView.top(to: view, offset: 100)
+        albumArtImageView.top(to: safeArea, offset: 10)
         let halfScreenWidth: CGFloat = UIScreen.main.bounds.width * 0.5
         albumArtImageView.height(halfScreenWidth)
         albumArtImageView.width(halfScreenWidth)
-        albumArtImageView.contentMode = .scaleAspectFit
     }
 
     func setupAlbumName() {
         view.addSubview(albumNameLabel)
-        albumNameLabel.translatesAutoresizingMaskIntoConstraints = false
         albumNameLabel.topToBottom(of: albumArtImageView, offset: 10)
         albumNameLabel.leading(to: safeArea, offset: 10)
         albumNameLabel.trailing(to: safeArea, offset: 10)
-
-        albumNameLabel.contentMode = .center
-        albumNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
-        albumNameLabel.numberOfLines = 0
-        albumNameLabel.lineBreakMode = .byWordWrapping
-        albumNameLabel.centerX(to: view)
+        albumNameLabel.centerX(to: safeArea)
     }
 
     func setupArtistName() {
         view.addSubview(artistNameLabel)
-        artistNameLabel.translatesAutoresizingMaskIntoConstraints = false
         artistNameLabel.topToBottom(of: albumNameLabel, offset: 5)
         artistNameLabel.leading(to: albumNameLabel)
         artistNameLabel.trailing(to: albumNameLabel)
-
-        artistNameLabel.contentMode = .center
-        artistNameLabel.font = UIFont.systemFont(ofSize: 13)
-        artistNameLabel.textColor = .darkGray
-        artistNameLabel.numberOfLines = 0
-        artistNameLabel.lineBreakMode = .byWordWrapping
-        artistNameLabel.centerX(to: view)
+        artistNameLabel.centerX(to: safeArea)
     }
+
     func setupGenre() {
         view.addSubview(genreLabel)
-        genreLabel.translatesAutoresizingMaskIntoConstraints = false
         genreLabel.topToBottom(of: artistNameLabel, offset: 2)
         genreLabel.leading(to: artistNameLabel)
         genreLabel.trailing(to: artistNameLabel)
-
-        genreLabel.contentMode = .center
-        genreLabel.font = UIFont.boldSystemFont(ofSize: 13)
-        genreLabel.textColor = .darkGray
-        genreLabel.numberOfLines = 0
-        genreLabel.lineBreakMode = .byWordWrapping
-        genreLabel.centerX(to: view)
+        genreLabel.centerX(to: safeArea)
     }
 
     func setupReleaseDate() {
         view.addSubview(releaseDateLabel)
-        releaseDateLabel.translatesAutoresizingMaskIntoConstraints = false
         releaseDateLabel.topToBottom(of: genreLabel, offset: 2)
         releaseDateLabel.leading(to: genreLabel)
         releaseDateLabel.trailing(to: genreLabel)
-
-        releaseDateLabel.contentMode = .center
-        releaseDateLabel.font = UIFont.systemFont(ofSize: 13)
-        releaseDateLabel.textColor = .gray
-        releaseDateLabel.numberOfLines = 0
-        releaseDateLabel.lineBreakMode = .byWordWrapping
-        releaseDateLabel.centerX(to: view)
+        releaseDateLabel.centerX(to: safeArea)
     }
 
     func setupCopyright() {
         view.addSubview(copyrightLabel)
-        copyrightLabel.translatesAutoresizingMaskIntoConstraints = false
         copyrightLabel.topToBottom(of: releaseDateLabel, offset: 2)
         copyrightLabel.leading(to: releaseDateLabel)
         copyrightLabel.trailing(to: releaseDateLabel)
-
-        copyrightLabel.contentMode = .center
-        copyrightLabel.font = UIFont.systemFont(ofSize: 13)
-        copyrightLabel.textColor = .lightGray
-        copyrightLabel.numberOfLines = 0
-        copyrightLabel.lineBreakMode = .byWordWrapping
-        copyrightLabel.centerX(to: view)
+        copyrightLabel.centerX(to: safeArea)
     }
 
     func setupData() {
-        if let album: Album =  album,
+        if let album: Album = album,
            let imageUrl: URL = URL(string: album.artworkUrl100) {
             albumArtImageView.loadImage(from: imageUrl)
             albumNameLabel.text = album.name
@@ -132,17 +150,13 @@ class AlbumDetailViewController: UIViewController {
 
     func setupStoreButton() {
         view.addSubview(visitStoreButton)
-        visitStoreButton.translatesAutoresizingMaskIntoConstraints = false
 
         visitStoreButton.leading(to: safeArea, offset: 20)
-        visitStoreButton.trailing(to: safeArea, offset: 20)
-        visitStoreButton.bottom(to: safeArea, offset: 20)
+        visitStoreButton.trailing(to: safeArea, offset: -20)
+        visitStoreButton.bottom(to: safeArea, offset: -20)
         visitStoreButton.centerX(to: view)
         visitStoreButton.height(40)
 
-        visitStoreButton.backgroundColor = .lightGray
-        visitStoreButton.setTitle("View in iTunes store", for: .normal)
-        visitStoreButton.setTitleColor(.systemBlue, for: .normal)
         visitStoreButton.addTarget(self,
                                    action: #selector(buttonAction),
                                    for: .touchUpInside)
@@ -150,8 +164,8 @@ class AlbumDetailViewController: UIViewController {
 
     @objc
     func buttonAction() {
-        if let urlString = album?.url,
-           let url = URL(string: urlString) {
+        if let urlString: String = album?.url,
+           let url: URL = URL(string: urlString) {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url)
             } else if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
