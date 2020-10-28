@@ -31,4 +31,4 @@ jobs:
     
     - name: Run tests
       if: steps.cache.outputs.cache-hit != 'true'
-      run: xcodebuild -project 'AlbumList.xcodeproj' -scheme 'AlbumList' -destination 'platform=iOS Simulator,name=iPhone 11 Pro' test | xcpretty
+      run: xcodebuild -project 'AlbumList.xcodeproj' -scheme 'AlbumList' -destination 'platform=iOS Simulator,name=iPhone 12 Pro' test | xcpretty
