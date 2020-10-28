@@ -63,12 +63,14 @@ class AlbumDetailViewController: UIViewController {
         storeButton.setTitle("View in iTunes store", for: .normal)
         storeButton.setTitleColor(.systemBlue, for: .normal)
         storeButton.translatesAutoresizingMaskIntoConstraints = false
+        storeButton.accessibilityIdentifier = AccessibilityIdentifier.VisitStoreButton.rawValue
         return storeButton
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        view.accessibilityIdentifier = AccessibilityIdentifier.AlbumDetailView.rawValue
         safeArea = view.layoutMarginsGuide
 
         setupView()

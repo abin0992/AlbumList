@@ -21,7 +21,8 @@ class AlbumListController: UIViewController {
         super.viewDidLoad()
 
         safeArea = view.layoutMarginsGuide
-        self.view.backgroundColor = .white
+        view.backgroundColor = .white
+        view.accessibilityIdentifier = AccessibilityIdentifier.AlbumListView.rawValue
 
         addNavigationBar()
         setupLoadingView()
@@ -51,6 +52,7 @@ class AlbumListController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = 85
         tableView.tableFooterView = UIView(frame: .zero)
+        tableView.accessibilityIdentifier = AccessibilityIdentifier.AlbumListTableView.rawValue
     }
 
     private func setupLoadingView() {
@@ -101,6 +103,8 @@ extension AlbumListController: UITableViewDataSource, UITableViewDelegate {
 
         let album: Album = albumsList[indexPath.row]
         cell.populateCell(with: album)
+        cell.isAccessibilityElement = true
+        cell.accessibilityIdentifier = "\(AccessibilityIdentifier.AlbumListTableCell.rawValue)_\(indexPath.row)"
         return cell
     }
 

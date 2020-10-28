@@ -33,6 +33,7 @@ class AlbumCell: UITableViewCell {
         nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
         nameLabel.numberOfLines = 3
         nameLabel.lineBreakMode = .byTruncatingTail
+        nameLabel.accessibilityIdentifier = AccessibilityIdentifier.AlbumNameLabel.rawValue
         return nameLabel
     }()
 
