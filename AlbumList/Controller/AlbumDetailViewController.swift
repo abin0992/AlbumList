@@ -13,48 +13,48 @@ class AlbumDetailViewController: UIViewController {
     var album: Album?
     var safeArea: UILayoutGuide!
 
-    private lazy var albumArtImageView: AlbumArtImageView = {
+    lazy var albumArtImageView: AlbumArtImageView = {
         let imageView: AlbumArtImageView = AlbumArtImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
-    private lazy var albumNameLabel: DetailLabel = {
+    lazy var albumNameLabel: DetailLabel = {
         let albumNameLabel: DetailLabel = DetailLabel()
         albumNameLabel.font = UIFont.boldSystemFont(ofSize: 18)
         return albumNameLabel
     }()
 
-    private lazy var artistNameLabel: DetailLabel = {
+    lazy var artistNameLabel: DetailLabel = {
         let artistNameLabel: DetailLabel = DetailLabel()
         artistNameLabel.font = UIFont.systemFont(ofSize: 13)
         artistNameLabel.textColor = .darkGray
         return artistNameLabel
     }()
 
-    private lazy var genreLabel: DetailLabel = {
+    lazy var genreLabel: DetailLabel = {
         let genreLabel: DetailLabel = DetailLabel()
         genreLabel.font = UIFont.boldSystemFont(ofSize: 13)
         genreLabel.textColor = .darkGray
         return genreLabel
     }()
 
-    private lazy var releaseDateLabel: DetailLabel = {
+    lazy var releaseDateLabel: DetailLabel = {
         let releaseDateLabel: DetailLabel = DetailLabel()
         releaseDateLabel.font = UIFont.systemFont(ofSize: 13)
         releaseDateLabel.textColor = .gray
         return releaseDateLabel
     }()
 
-    private lazy var copyrightLabel: DetailLabel = {
+    lazy var copyrightLabel: DetailLabel = {
         let copyrightLabel: DetailLabel = DetailLabel()
         copyrightLabel.font = UIFont.systemFont(ofSize: 13)
         copyrightLabel.textColor = .lightGray
         return copyrightLabel
     }()
 
-    private lazy var visitStoreButton: UIButton = {
+    lazy var visitStoreButton: UIButton = {
         let storeButton: UIButton = UIButton()
         storeButton.backgroundColor = .clear
         storeButton.layer.cornerRadius = 5

@@ -1,25 +1,27 @@
 //
-//  MockAlbumService.swift
+//  MockNetwork.swift
 //  AlbumListTests
 //
 //  Created by Abin Baby on 28/10/20.
 //
 
 @testable import AlbumList
+import Foundation
 import XCTest
 
-class MockAlbumService: AlbumService {
+class NetworkMock: NetworkManager {
+    static let sharedInstanceMock: NetworkMock = NetworkMock()
     let testJSONFile: String = "test_album"
 
-    override func fetchAlbumLists(completion: @escaping (Result<AlbumList, Exception>) -> Void) {
+    override func fetch <T: Decodable>( completion: @escaping (Result<T, Exception>) -> Void) {
         guard let jsonURL = Bundle(for: type(of: self)).url(forResource: testJSONFile, withExtension: "json") else {
-            XCTFail("Loading file '\(testJSONFile).json' failed!")
+            XCTFail("Loading file '\(self.testJSONFile).json' failed!")
             return
         }
 
         do {
             let data: Data = try Data(contentsOf: jsonURL)
-            let result: AlbumList = try JSONDecoder().decode(AlbumList.self, from: data)
+            let result: T = try JSONDecoder().decode(T.self, from: data)
 
             completion(.success(result))
 

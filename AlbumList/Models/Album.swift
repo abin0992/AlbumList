@@ -24,6 +24,17 @@ struct Album: Codable {
     let artworkUrl100: String
     let genres: [Genre]
     let url: String
+
+    init(artistName: String, id: String, releaseDate: String, name: String, copyright: String, artworkUrl100: String, genres: [Genre], url: String) {
+        self.artistName = artistName
+        self.id = id
+        self.releaseDate = releaseDate
+        self.name = name
+        self.copyright = copyright
+        self.artworkUrl100 = artworkUrl100
+        self.genres = genres
+        self.url = url
+    }
 }
 
 // MARK: - Genre

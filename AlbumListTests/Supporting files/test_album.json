@@ -1,40 +1,74 @@
 {
   "feed": {
-    "title": "Coming Soon",
-    "id": "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/1/explicit.json",
+    "title": "Top Albums",
+    "id": "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/5/explicit.json",
     "author": {
       "name": "iTunes Store",
       "uri": "http://wwww.apple.com/us/itunes/"
     },
     "links": [
       {
-        "self": "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/1/explicit.json"
+        "self": "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/5/explicit.json"
       },
       {
-        "alternate": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewRoom?fcId=1396220241&app=music"
+        "alternate": "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?genreId=34&popId=82&app=music"
       }
     ],
     "copyright": "Copyright © 2018 Apple Inc. All rights reserved.",
     "country": "us",
     "icon": "http://itunes.apple.com/favicon.ico",
-    "updated": "2020-10-26T01:49:43.000-07:00",
+    "updated": "2020-10-27T05:11:06.000-07:00",
     "results": [
       {
-        "artistName": "Miley Cyrus",
-        "id": "1536966025",
-        "releaseDate": "2020-11-27",
-        "name": "Plastic Hearts",
+        "artistName": "21 Savage & Metro Boomin",
+        "id": "1534209957",
+        "releaseDate": "2020-10-02",
+        "name": "SAVAGE MODE II",
         "kind": "album",
-        "copyright": "℗ 2020 RCA Records, a division of Sony Music Entertainment",
-        "artistId": "137057909",
+        "copyright": "℗ 2020 Slaughter Boomin, LLC under exclusive license to Epic Records. With Boominati Worldwide/Republic Records",
+        "artistId": "894820464",
         "contentAdvisoryRating": "Explicit",
-        "artistUrl": "https://music.apple.com/us/artist/miley-cyrus/137057909?app=music",
-        "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/b9/c9/49/b9c949e6-d635-be2f-971d-81145effcf3d/886448810216.jpg/200x200bb.png",
+        "artistUrl": "https://music.apple.com/WebObjects/MZStore.woa/wa/viewCollaboration?cc=us&ids=894820464-670534462&app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/ac/de/53/acde53ab-a5de-5338-75e1-3669c49e1204/886448747697.jpg/200x200bb.png",
         "genres": [
           {
-            "genreId": "14",
-            "name": "Pop",
-            "url": "https://itunes.apple.com/us/genre/id14"
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          },
+          {
+            "genreId": "1076",
+            "name": "Rap",
+            "url": "https://itunes.apple.com/us/genre/id1076"
+          },
+          {
+            "genreId": "1069",
+            "name": "Dirty South",
+            "url": "https://itunes.apple.com/us/genre/id1069"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/savage-mode-ii/1534209957?app=music"
+      },
+      {
+        "artistName": "Luke Combs",
+        "id": "1527782144",
+        "releaseDate": "2020-10-23",
+        "name": "What You See Ain't Always What You Get (Deluxe Edition)",
+        "kind": "album",
+        "copyright": "℗ 2020 River House Artists LLC, under exclusive license to Sony Music Entertainment. All rights reserved.",
+        "artistId": "815635315",
+        "artistUrl": "https://music.apple.com/us/artist/luke-combs/815635315?app=music",
+        "artworkUrl100": "https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/13/4a/11/134a11e7-35f1-a9e4-3f8c-a70443ca2e0a/886448691341.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "6",
+            "name": "Country",
+            "url": "https://itunes.apple.com/us/genre/id6"
           },
           {
             "genreId": "34",
@@ -42,7 +76,82 @@
             "url": "https://itunes.apple.com/us/genre/id34"
           }
         ],
-        "url": "https://music.apple.com/us/album/plastic-hearts/1536966025?app=music"
+        "url": "https://music.apple.com/us/album/what-you-see-aint-always-what-you-get-deluxe-edition/1527782144?app=music"
+      },
+      {
+        "artistName": "Ty Dolla $ign",
+        "id": "1536655568",
+        "releaseDate": "2020-10-23",
+        "name": "Featuring Ty Dolla $ign",
+        "kind": "album",
+        "copyright": "℗ 2020 Atlantic Recording Corporation for the United States and WEA International Inc. for the world outside of the United States",
+        "artistId": "602917745",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/ty-dolla-%24ign/602917745?app=music",
+        "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/85/7e/de/857edeb0-0882-0b79-a41a-bc9ef987bb0a/075679803719.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "15",
+            "name": "R&B/Soul",
+            "url": "https://itunes.apple.com/us/genre/id15"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/featuring-ty-dolla-%24ign/1536655568?app=music"
+      },
+      {
+        "artistName": "YoungBoy Never Broke Again",
+        "id": "1530122403",
+        "releaseDate": "2020-09-11",
+        "name": "Top",
+        "kind": "album",
+        "copyright": "Never Broke Again, LLC / Atlantic Records, ℗ 2020 Artist Partner Group, Inc.",
+        "artistId": "1168822104",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/youngboy-never-broke-again/1168822104?app=music",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/13/d6/e3/13d6e3ac-7a38-c6c3-6566-e027f3735426/075679802378.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/top/1530122403?app=music"
+      },
+      {
+        "artistName": "Pop Smoke",
+        "id": "1521889004",
+        "releaseDate": "2020-07-03",
+        "name": "Shoot For The Stars Aim For The Moon",
+        "kind": "album",
+        "copyright": "Victor Victor Worldwide; ℗ 2020 Republic Records, a division of UMG Recordings, Inc. & Victor Victor Worldwide",
+        "artistId": "1450601383",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https://music.apple.com/us/artist/pop-smoke/1450601383?app=music",
+        "artworkUrl100": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/17/6d/e0/176de0c9-42a6-8741-9d22-6aae00094e1d/20UMGIM55833.rgb.jpg/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "18",
+            "name": "Hip-Hop/Rap",
+            "url": "https://itunes.apple.com/us/genre/id18"
+          },
+          {
+            "genreId": "34",
+            "name": "Music",
+            "url": "https://itunes.apple.com/us/genre/id34"
+          }
+        ],
+        "url": "https://music.apple.com/us/album/shoot-for-the-stars-aim-for-the-moon/1521889004?app=music"
       }
     ]
   }
