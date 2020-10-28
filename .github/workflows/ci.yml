@@ -1,0 +1,34 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+        
+    - name: Cache SPM
+      id: cache
+      uses: actions/cache@v1
+      with:
+        path: .build
+        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-spm-
+    
+    - name: Install swiftlint
+      run: brew install swiftlint
+
+    - name: Build app
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: xcodebuild -project 'AlbumList.xcodeproj' -scheme 'AlbumList' -destination 'generic/platform=iOS' -configuration Release build CODE_SIGNING_ALLOWED=NO | xcpretty
+    
+    - name: Run tests
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: xcodebuild -project 'AlbumList.xcodeproj' -scheme 'AlbumList' -destination 'platform=iOS Simulator,name=iPhone 11 Pro' test | xcpretty
