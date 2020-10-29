@@ -5,7 +5,7 @@
 //  Created by Abin Baby on 27/10/20.
 //
 
-import SafariServices
+import StoreKit
 import UIKit
 
 class AlbumDetailViewController: UIViewController {
@@ -165,13 +165,13 @@ class AlbumDetailViewController: UIViewController {
 
     @objc
     func visitButtonTapped() {
-        if let urlString: String = album?.url,
-           let url: URL = URL(string: urlString) {
+        // SKStoreProductViewController only works on actual device. While running in simulator safari is opened
+        if let albumId: String = album?.id {
+            openStoreProductWithiTunesItemIdentifier(albumId)
+        } else if let albumUrl: String = album?.url,
+                  let url: URL = URL(string: albumUrl) {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url)
-            } else if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
-                let safariViewController: SFSafariViewController = SFSafariViewController(url: url)
-                navigationController?.present(safariViewController, animated: true)
             }
         }
     }
@@ -182,5 +182,24 @@ class AlbumDetailViewController: UIViewController {
 
     func generateReleaseDate(from dateString: String) -> String {
         "Released " + dateString.formattedDateFromString(withInputFormat: "yyyy-MM-dd", outputFormat: "MMMM d, yyyy")
+    }
+}
+
+extension AlbumDetailViewController: SKStoreProductViewControllerDelegate {
+    func openStoreProductWithiTunesItemIdentifier(_ identifier: String) {
+        let storeViewController: SKStoreProductViewController = SKStoreProductViewController()
+        storeViewController.delegate = self
+
+        let parameters: [String: String] = [SKStoreProductParameterITunesItemIdentifier: identifier]
+        storeViewController.loadProduct(withParameters: parameters) { [weak self] loaded, _ -> Void in
+            if loaded {
+                self?.present(storeViewController, animated: true, completion: nil)
+            } else {
+                AlertPresenter.presentAlert(self ?? AlbumDetailViewController(), message: "Unable to load the album in iTunes store")
+            }
+        }
+    }
+    private func productViewControllerDidFinish(viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil)
     }
 }

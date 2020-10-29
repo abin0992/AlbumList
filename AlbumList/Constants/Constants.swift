@@ -10,3 +10,8 @@ import Foundation
 struct Constants {
     static let albumsListUrl: String = "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/100/explicit.json"
 }
+
+struct Alert {
+    static let ErrorTitle: String = "Error"
+    static let okButtonLabel: String = "Ok"
+}

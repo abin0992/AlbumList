@@ -19,7 +19,7 @@ class NetworkManager {
             fatalError("Albums list URL not found")
         }
 
-        let task: URLSessionTask = URLSession.shared.dataTask(with: url) { result in
+        let task: URLSessionTask = URLSession.shared.dataTask(with: url) { [weak self] result in
             switch result {
             case .success(( _, let data)):
                 do {
