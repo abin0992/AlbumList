@@ -159,12 +159,12 @@ class AlbumDetailViewController: UIViewController {
         visitStoreButton.height(40)
 
         visitStoreButton.addTarget(self,
-                                   action: #selector(buttonAction),
+                                   action: #selector(visitButtonTapped),
                                    for: .touchUpInside)
     }
 
     @objc
-    func buttonAction() {
+    func visitButtonTapped() {
         if let urlString: String = album?.url,
            let url: URL = URL(string: urlString) {
             if UIApplication.shared.canOpenURL(url) {
