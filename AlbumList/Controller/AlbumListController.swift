@@ -76,7 +76,11 @@ class AlbumListController: UIViewController {
 
     // MARK: - API call
     func fetchAlbumList() {
-        albumService.fetchAlbumLists { (result: Swift.Result<AlbumList, Exception>) in
+        albumService.fetchAlbumLists { [weak self] (result: Result<AlbumList, Exception>) in
+            guard let self = self else {
+                return
+            }
+
             switch result {
             case .success(let dataArray):
                 self.albumsList = dataArray.feed.results

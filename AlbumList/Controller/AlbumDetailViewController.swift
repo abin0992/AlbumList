@@ -153,6 +153,7 @@ class AlbumDetailViewController: UIViewController {
     func setupStoreButton() {
         view.addSubview(visitStoreButton)
 
+        // Button set 20 points leading, trailing and bottom of safe area for better UX in devices with round corners(iPhone 12 series etc)
         visitStoreButton.leading(to: safeArea, offset: 20)
         visitStoreButton.trailing(to: safeArea, offset: -20)
         visitStoreButton.bottom(to: safeArea, offset: -20)
@@ -196,10 +197,14 @@ extension AlbumDetailViewController: SKStoreProductViewControllerDelegate {
 
         let parameters: [String: String] = [SKStoreProductParameterITunesItemIdentifier: identifier]
         storeViewController.loadProduct(withParameters: parameters) { [weak self] loaded, _ -> Void in
+            guard let self = self else {
+                return
+            }
+
             if loaded {
-                self?.present(storeViewController, animated: true, completion: nil)
+                self.present(storeViewController, animated: true, completion: nil)
             } else {
-                AlertPresenter.presentAlert(self ?? AlbumDetailViewController(), message: "Unable to load the album in iTunes store")
+                AlertPresenter.presentAlert(self, message: "Unable to load the album in iTunes store")
             }
         }
     }
