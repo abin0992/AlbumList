@@ -166,14 +166,18 @@ class AlbumDetailViewController: UIViewController {
     @objc
     func visitButtonTapped() {
         // SKStoreProductViewController only works on actual device. While running in simulator safari is opened
+        #if targetEnvironment(simulator)
+        if let albumUrl: String = album?.url,
+                 let url: URL = URL(string: albumUrl) {
+           if UIApplication.shared.canOpenURL(url) {
+               UIApplication.shared.open(url)
+           }
+        }
+        #else
         if let albumId: String = album?.id {
             openStoreProductWithiTunesItemIdentifier(albumId)
-        } else if let albumUrl: String = album?.url,
-                  let url: URL = URL(string: albumUrl) {
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url)
-            }
         }
+        #endif
     }
 
     func generateGenreLabel(from genres: [Genre]) -> String {
