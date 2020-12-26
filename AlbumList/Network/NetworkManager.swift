@@ -11,7 +11,7 @@ class NetworkManager {
 
     static let sharedInstance: NetworkManager = NetworkManager()
 
-    init() {}
+    private init() {}
 
     func fetch <T: Decodable>( completion: @escaping (Result<T, Exception>) -> Void) {
 
